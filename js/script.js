@@ -39,12 +39,17 @@ function clearQR(){
 }
 
 //Saving the QR Code card
-function saveImg(){
-    var dlBtn = document.getElementById('dl.btn');
-    dlBtn.onclick = function (){
+
+var dlBtn = document.getElementById('dl-btn');
+    dlBtn.onclick = function () {
         var image = document.querySelector('#card-id');
-        html2canvas(image).then((canvas) =>{
-            document.appendChild(canvas);
+        html2canvas(image).then(canvas =>{
+            var imgURL = canvas.toDataURL('image/png');
+            console.log(imgURL);
+            var dlink = document.createElement('a');
+            dlink.setAttribute("href",imgURL);
+            dlink.setAttribute('download', 'MyQRcode.png');   
+            dlink.click();
+            dlink.remove();     
         });
-   }
 }
