@@ -1,0 +1,16 @@
+
+.cardborder{
+    border: 3px outset navy;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:425px) {
+    .cardborder{
+        width: 90%;
+    }
+}
+@media screen and (min-width:768px){
+    .cardborder{
+        width: 50%;
+    }
+}
