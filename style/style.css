@@ -1,4 +1,8 @@
 
+body{
+    position: relative;
+    height: 100vh;
+}
 .cardborder{
     border: 3px outset navy;
     border-radius: 10px;
@@ -13,4 +17,15 @@
     .cardborder{
         width: 40%;
     }
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: blue;
+}
+footer a{
+    text-decoration: none;
 }
